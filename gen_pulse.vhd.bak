@@ -1,0 +1,28 @@
+library ieee ;
+use ieee . std_logic_1164 .all ;
+
+entity gen_pulse is
+	port (
+		my_clock : in std_logic ;
+		my_pulse : out std_logic
+	);
+end;
+
+architecture behave of gen_pulse is
+
+begin
+	process
+		constant COUNT_MAX : natural := 50e6 -1;
+		variable count : natural range 0 to COUNT_MAX ;
+		begin
+		wait until rising_edge ( my_clock );
+		if count < COUNT_MAX then
+			count := count +1;
+			my_pulse <= '0';
+		else
+			count := 0;
+			my_pulse <= '1';
+		end if;
+	end process ;
+	
+end;

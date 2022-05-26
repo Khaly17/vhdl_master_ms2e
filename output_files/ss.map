@@ -1,0 +1,16 @@
+BLOCK		START ADDRESS		END ADDRESS
+
+Page_1		0x00000000		0x0041F013
+Page_0		0x0041F100		0x0083E113
+
+
+Configuration device: EPCQ256
+Configuration mode: Active Serial
+Quad-Serial configuration device dummy clock cycle: 4
+
+
+Notes:
+
+- Data checksum for this conversion is 0x7E5D817E
+
+- All the addresses in this file are byte addresses
